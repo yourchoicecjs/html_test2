@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+/* common.css */
+html,body{margin:0; font-size:20px;}
+h1,h2,h3,h4,h5,h6,p,figure{ margin:0; }
+a{ text-decoration: none; }
+img{vertical-align: middle;}
+*{
+    box-sizing: border-box;
+    font-size:1rem;
+    color:#555;
+}
+
+.f-nanum{font-family: 'Nanum Myeongjo', serif;}
+
+header{ padding:40px 0; }
+header > div{
+    width:1200px; margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div > h1{}
+header > div > h1 > a{font-size:1.5rem;}
+header > div > nav{}
+header > div > nav a{
+    font-size:0.8rem;
+    font-weight: bold;
+    padding:0 20px;
+    position:relative;
+}
+
+
+header > div > nav a::after{
+    /* 필수속성 content */
+    content:'';
+    border-bottom:3px solid #f00;
+    position:absolute;
+    left:50%; bottom:-4px;
+    width:0%;
+    transition: 0.5s;
+}
+header > div > nav a:hover::after{
+     width:100%; left:0;
+}
